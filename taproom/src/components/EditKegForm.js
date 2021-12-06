@@ -24,3 +24,10 @@ function EditKegForm(props) {
   </React.Fragment>
   );
 }
+
+EditKegForm.propTypes = {
+  keg: PropTypes.object,
+  onEditKeg: PropTypes.func
+}
+
+export default EditKegForm;
