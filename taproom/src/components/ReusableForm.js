@@ -5,7 +5,7 @@ function ReusableForm(props) {
   return (
     <React.Fragment>
       <form onSubmit={props.formSubmissionHandler}>
-      <label for="names">Name:</label>
+      <label for="name">Name:</label>
           <input type="text" name="name" placeholder="Kombourgeoisie" className="form-control"/>
           <br />
           <label for="brand">Brand:</label>
@@ -28,7 +28,7 @@ function ReusableForm(props) {
   )
 }
 
-ReuseableForm.propTypes = {
+ReusableForm.propTypes = {
   formSubmissionHandler: PropTypes.func
 }
 

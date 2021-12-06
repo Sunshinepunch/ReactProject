@@ -6,15 +6,16 @@ function KegDetail(props) {
   return (
     <React.Fragment>
       <h1>Keg Details </h1>
-      <h3>{keg.names}</h3>
+      <h3>{keg.name}</h3>
       <p> Brand: {keg.brand}</p>
       <p> Flavor: {keg.flavor}</p>
       <p> Price: {keg.price}</p>
+      <p> {keg.quantity} Pints Remaining</p>
     </React.Fragment>
   )
 }
 
-KegDetail.proptypes = {
+KegDetail.propTypes = {
   keg: PropTypes.object
 }
 
