@@ -10,7 +10,8 @@ class KegControl extends React.Component {
     this.state = {
       formVisibleOnPage: false,
       KegList: [],
-      selectedKeg: null
+      selectedKeg: null,
+      editing: false
     };
   }
 
@@ -40,15 +41,18 @@ handlePint = (id) => {
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
+
     if (this.state.formVisibleOnPage){
       currentlyVisibleState = <NewKegForm onNewKegCreation={this.handleNewKegToList}/>
       buttonText = "Return to Keg List";
     } else {
-      currentlyVisibleState = <KegList kegList={this.state.KegList} onKegSelection={this.handleChangingSelectedKeg} onClickBuy = {this.handleSellPint}/>
+      currentlyVisibleState = <KegList kegList={this.state.KegList} />
       buttonText = "Add New Keg";
     }
     return(
       <React.Fragment>
+        <h1>The Kombutcha Lounge </h1>
+        <hr />
         {currentlyVisibleState}
         <button onClick={this.handleClick}>{buttonText}</button>
         </React.Fragment>
