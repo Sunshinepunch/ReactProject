@@ -11,7 +11,6 @@ function KegDetail(props) {
       <p> Flavor: {keg.flavor}</p>
       <p> Price: {keg.price}</p>
       <p> {keg.quantity} Pints Remaining</p>
-      <button onClick={ props.onClickEditKeg }>Update This Keg</button>
     </React.Fragment>
   )
 }

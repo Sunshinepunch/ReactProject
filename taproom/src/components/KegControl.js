@@ -56,12 +56,30 @@ handleDeleteKeg = (id) => {
   this.setState({KegList: newKegList, selectedKeg: null});
 }
 
-// handlePint = (id) => {
-//   let selectedKeg = this.state.KegList.find(keg => keg.id === id);
-//   selectedKeg.quantity --;
-//   const newKegList = this.state.KegList.map((keg) => {return keg.id === id ? selectedKeg : keg});
-//   this.setState({ KegList: newKegList});
-// }
+handleRefillPint = () => {
+  let refillPint = this.state.KegList.filter(keg => keg.id === this.state.selectedKeg.id)[0];
+
+  if(refillPint.quantity <= 0) {
+    alert("Sorry this keg is empty. Refill or try another delicious flavor.");
+  } else {
+    refillPint = refillPint.quantity--;
+    this.setState({ refillPint: refillPint});
+  }
+}
+
+
+handlePint = () => {
+  let refillKeg = this.state.KegList.filter(keg => keg.id === this.state.selectedKeg.id)[0];
+  if (refillKeg.quantity >= 124) {
+    alert("This keg is full of delicious savory Kombutcha. Maybe drink some first?")
+  } else {
+    refillKeg = refillKeg.quantity++;
+
+    this.setState({
+      refillKeg: refillKeg
+    });
+  }
+}
 
   render(){
     let currentlyVisibleState = null;
