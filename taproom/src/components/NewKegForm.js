@@ -10,8 +10,9 @@ function NewKegForm(props){
     props.onNewKegCreation({
       name: event.target.name.value,
       brand: event.target.brand.value,
-      price: event.target.price.value,
+      price: event.target.price.valueAsNumber,
       flavor: event.target.flavor.value,
+      quantity: event.target.quantity.valueAsNumber,
       id: v4()
     });
   }
@@ -19,7 +20,7 @@ function NewKegForm(props){
     <React.Fragment>
       <ReusableForm
       formSubmissionHandler={handleNewKegFormSubmission}
-      />
+      buttonText = "Add Keg" />
     </React.Fragment>
   );
 }
