@@ -56,18 +56,6 @@ handleDeleteKeg = (id) => {
   this.setState({KegList: newKegList, selectedKeg: null});
 }
 
-handleRefillPint = () => {
-  let refillPint = this.state.KegList.filter(keg => keg.id === this.state.selectedKeg.id)[0];
-
-  if(refillPint.quantity <= 0) {
-    alert("Sorry this keg is empty. Refill or try another delicious flavor.");
-  } else {
-    refillPint = refillPint.quantity--;
-    this.setState({ refillPint: refillPint});
-  }
-}
-
-
 handlePint = () => {
   let refillKeg = this.state.KegList.filter(keg => keg.id === this.state.selectedKeg.id)[0];
   if (refillKeg.quantity >= 124) {
@@ -81,6 +69,20 @@ handlePint = () => {
   }
 }
 
+handleRefillPint = () => {
+  let refillPint = this.state.KegList.filter(keg => keg.id === this.state.selectedKeg.id)[0];
+
+  if(refillPint.quantity <= 0) {
+    alert("Sorry this keg is empty. Refill or try another delicious flavor.");
+  } else {
+    refillPint = refillPint.quantity--;
+    this.setState({ refillPint: refillPint});
+  }
+}
+
+
+
+
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
@@ -88,7 +90,7 @@ handlePint = () => {
       currentlyVisibleState = <EditKegForm keg={this.state.selectedKeg} onEditKeg = {this.handleEditKeg}/>
       buttonText = "Return to Kegs";
     } else if(this.state.selectedKeg != null) {
-      currentlyVisibleState = <KegDetail keg={this.state.selectedKeg} onClickDelete = {this.handleDeleteKeg} onClickEdit = {this.handleEditClick}/>
+      currentlyVisibleState = <KegDetail keg={this.state.selectedKeg} onClickDelete = {this.handleDeleteKeg} onClickEdit = {this.handleEditClick} onClickingPourPint = {this.handleRefillPint} onClickingRefillKeg={this.handlePint}/>
       buttonText = "Return to Kegs";
     } else if (this.state.formVisibleOnPage){
       currentlyVisibleState = <NewKegForm onNewKegCreation={this.handleNewKegToList}/>
