@@ -18,7 +18,7 @@ function ReusableForm(props) {
           <input type="text" name="flavor" placeholder="Ruby Crystal Orange" className="form-control"/>
           <br/>
           <label for="quantity">Pints Per Keg:</label>
-          <input type="number" name="quantity" placeholder="124 pints" className="form-control"/>
+          <input type="number" name="quantity" placeholder="124" className="form-control"/>
           <br />
           <button type="submit" className="btn">Submit</button>
         </form>

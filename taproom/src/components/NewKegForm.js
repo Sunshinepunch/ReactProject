@@ -12,7 +12,6 @@ function NewKegForm(props){
       brand: event.target.brand.value,
       price: event.target.price.value,
       flavor: event.target.flavor.value,
-      quantity: event.target.quantity,
       id: v4()
     });
   }
