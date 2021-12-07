@@ -2,16 +2,19 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function KegDetail(props) {
-  const { keg, onClickingPourPint, onClickingRefillKeg } = props;
+  const { keg, onClickingPourPint, onClickingRefillKeg, onClickingFullFillKeg } = props;
 
 
   let emptyKeg = "";
   let fullKeg = "";
+  let testKeg = "";
 
   if (keg.quantity === 0) {
     emptyKeg = <button disabled> Empty! Refill Please! </button>
+    fullKeg = <button disabled> You drank it all!</button>
   } else {
     emptyKeg = <button onClick={onClickingPourPint}>Pour 1 Pint</button>
+    testKeg = <button onClick={onClickingFullFillKeg}>Empty everything!</button>
   }
 
 
@@ -35,6 +38,7 @@ function KegDetail(props) {
       <p> {keg.quantity} Pints Remaining</p>
       {emptyKeg}
       {fullKeg}
+      {testKeg}
     </React.Fragment>
   )
 }
@@ -43,7 +47,8 @@ KegDetail.propTypes = {
   keg: PropTypes.object,
   onClickEditKeg: PropTypes.func,
   onClickingPourPint: PropTypes.func, 
-  onClickingRefillKeg: PropTypes.func
+  onClickingRefillKeg: PropTypes.func,
+  onClickingFullFillKeg: PropTypes.func
 }
 
 export default KegDetail;

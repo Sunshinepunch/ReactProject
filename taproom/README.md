@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# _{Friday Week 13 - Tap Room - Kombutcha Lounge}
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### By _{Becket Harvey}_
 
-## Available Scripts
 
-In the project directory, you can run:
+#### _Technologies Used_
+* CSS
+* HTML
+* JavaScript
+* React.js
+* Draw.IO
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Description _This project presents a fictional Kombutcha lounge that allows a user to add custom kegs including name, brand, price, and quantity of pints (suggested 124 default). It allows a user to view Keg details and contains the ability to subtract pints from a keg as if selling them. Pints can be re-added as well, buttons disable when kegs are full or empty. A button to completely empty a keg is included. A project diagram is included to display component diagram_
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Setup/Installation Requirements
+* Clone the repository, or download and open the Zip file on your machine
+* To install required packages, navigate to the taproom project file in a command prompt terminal/GitBash and run:
+> npm install
+* To run the program, simply navigate to the taproom project file and run the following as above:
+> npm start
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Known Bugs
+* _Edit functionality and delete functionality were coded, but the button did not return a path and delete functionality resulted in error - buttons have been removed but pathing code remains_
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## License
+_{MIT}_ This is open source for anyone to use and I am not responsible for any problems resulting from its use or implementation
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contact Information
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+| Author | GitHub | Email |
+|--------|:------:|:-----:|
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+| [Becket Harvey](https://www.linkedin.com/in/becket-harvey-sunshine/) | [SunshinePunch](https://github.com/SunshinePunch) |
